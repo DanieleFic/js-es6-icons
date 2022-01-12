@@ -140,19 +140,36 @@ Quando l’utente seleziona un tipo dalla select,
 visualizzare solamente le icone corrispondenti.*/
 
 //funzione che prende ti prende il value del select del DOM
-function myFunction() { 
+
+/*function myFunction() { 
 	let scelta = document.getElementById("schede").value; 
 	console.log(scelta);
-	return scelta
-} 
-
-
-if(scelta == "tutto"){
-	//schede.forEach((element, index, array) => console.log(element, index, array))
-	console.log("oooooo")
 }
 
+document.getElementById("schede").addEventListener("change", myFunction);
 
+
+/*if(scelta == "tutto"){
+	//schede.forEach((element, index, array) => console.log(element, index, array))
+	console.log("oooooo")
+}*/
+
+const selectElement = document.getElementById('schede');
+
+selectElement.addEventListener('change', (event) => {
+	console.log(event.target.value);
+	let scelta = event.target.value;
+	if(scelta == "tutto"){
+		
+		console.log("Hai scelto tutto")
+	}else if (scelta == "Animal"){
+		console.log("Hai scelto Animal")
+	}else if (scelta == "Vegetables"){
+		console.log("Hai scelto Vegetables")
+	}else if (scelta == "User"){
+		console.log("Hai scelto User")
+	}
+});
 
 
 
