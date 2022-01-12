@@ -1,4 +1,4 @@
-[
+const schede =[
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +112,19 @@
 		color: 'blue'
 	}
 ];
+
+console.log("ciao")
+
+function creazioneSchede( schede ){
+    document.querySelector(".row").innerHTML +=
+    `<div class="col-2 mx-4 py-3">
+	<div class="p-2  rounded bg-light border border-dark d-flex flex-column align-items-center justify-content-center">
+		<i class="${schede.family} ${schede.prefix}${schede.name}" style="${schede.color}"></i>
+		<span>${schede.name}</span> 
+	</div>
+  </div> `           
+  }
+
+  for(let i=0; i < schede.length; i++){
+    creazioneSchede( schede[i] )
+}
