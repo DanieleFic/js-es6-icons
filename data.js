@@ -118,7 +118,7 @@ console.log("ciao")
 //creo una function che mi crea i post
 function creazioneSchede( schede ){
     document.querySelector(".row").innerHTML +=
-    `<div class="col-2 mx-4 py-3">
+    `<div class="col-2 mx-5 py-3">
 		<div class="p-2  rounded bg-light border border-dark d-flex flex-column align-items-center justify-content-center">
 			<i class="${schede.family} ${schede.prefix}${schede.name}" style="color:${schede.color}"></i>
 			<span>${schede.name}</span> 
@@ -130,3 +130,60 @@ function creazioneSchede( schede ){
 for(let i=0; i < schede.length; i++){
 	creazioneSchede( schede[i] )
 }
+
+
+
+/*Milestone 3
+Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone
+(animal, vegetable, user). 
+Quando l’utente seleziona un tipo dalla select, 
+visualizzare solamente le icone corrispondenti.*/
+
+//funzione che prende ti prende il value del select del DOM
+function myFunction() { 
+	let scelta = document.getElementById("schede").value; 
+	console.log(scelta);
+	return scelta
+} 
+
+
+if(scelta == "tutto"){
+	//schede.forEach((element, index, array) => console.log(element, index, array))
+	console.log("oooooo")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*if(scelta == "facile"){
+        for(i=1; i<=100; i++){
+            caselle.innerHTML += `<div class="quadrato col-1 item-${i}">${i}</div>`;
+        }
+
+    }else if(scelta == "media"){
+        for(i=1; i<=81; i++){
+            caselle.innerHTML += `<div class="quadrato col-1 item-${i}">${i}</div>`;
+        }
+    }else{
+        for(i=1; i<=49; i++){
+        caselle.innerHTML += `<div class="quadrato col-1 item-${i}">${i}</div>`;
+        }
+    }*/
